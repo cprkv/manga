@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Manga",
+  "version": "1.0",
+  "description": "Adds a download as pdf button to mangalib.",
+  "icons": {
+    "48": "icons/manga-48.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.mangalib.me/*"],
+      "js": ["jquery-3.5.1.min.js", "manga.js"]
+    }
+  ],
+  "permissions": [
+    "*://*.mangalib.me/*",
+    "*://img4.imgslib.ru/*"
+  ]
+}
